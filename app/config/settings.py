@@ -39,6 +39,8 @@ class Settings(BaseSettings):
     # Endereço da API, usado pelo front em Streamlit.
     # No computador é a API local; na nuvem, aponta para a API publicada no Render.
     api_url: str = "http://127.0.0.1:8000"
+    mongo_url: str = "mongodb://localhost:27017"
+    mongo_banco: str = "finbot"  # nome do banco de dados dentro do servidor
 
     @property
     def modelo(self) -> str:
